@@ -7,14 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F15F5AE1D8FFC7300F3F723 /* pingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F15F5AD1D8FFC7300F3F723 /* pingData.swift */; };
+		7F15F5B41D8FFD6800F3F723 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F15F5AF1D8FFD5600F3F723 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F15F5B61D8FFD6800F3F723 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F15F5B01D8FFD5600F3F723 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F51A6B11D8E6ED100A22444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F51A6B01D8E6ED100A22444 /* AppDelegate.swift */; };
 		7F51A6B31D8E6ED100A22444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F51A6B21D8E6ED100A22444 /* ViewController.swift */; };
 		7F51A6B61D8E6ED100A22444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F51A6B41D8E6ED100A22444 /* Main.storyboard */; };
 		7F51A6B81D8E6ED100A22444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F51A6B71D8E6ED100A22444 /* Assets.xcassets */; };
 		7F51A6BB1D8E6ED100A22444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F51A6B91D8E6ED100A22444 /* LaunchScreen.storyboard */; };
+		7F93A0871D8FB18D006B2A97 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93A0861D8FB18D006B2A97 /* LocationService.swift */; };
+		7F93A0891D8FB1B5006B2A97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F93A0881D8FB1B5006B2A97 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7F15F5B71D8FFD6800F3F723 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7F15F5B61D8FFD6800F3F723 /* RealmSwift.framework in Embed Frameworks */,
+				7F15F5B41D8FFD6800F3F723 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7F15F5AD1D8FFC7300F3F723 /* pingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pingData.swift; sourceTree = "<group>"; };
+		7F15F5AF1D8FFD5600F3F723 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		7F15F5B01D8FFD5600F3F723 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		7F51A6AD1D8E6ED100A22444 /* swiftLocationTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftLocationTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F51A6B01D8E6ED100A22444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F51A6B21D8E6ED100A22444 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +45,8 @@
 		7F51A6B71D8E6ED100A22444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F51A6BA1D8E6ED100A22444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F51A6BC1D8E6ED100A22444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F93A0861D8FB18D006B2A97 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		7F93A0881D8FB1B5006B2A97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,15 +54,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F93A0891D8FB1B5006B2A97 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F15F5A31D8FFBDF00F3F723 /* realmDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				7F15F5AF1D8FFD5600F3F723 /* Realm.framework */,
+				7F15F5B01D8FFD5600F3F723 /* RealmSwift.framework */,
+			);
+			path = realmDatabase;
+			sourceTree = "<group>";
+		};
 		7F51A6A41D8E6ED100A22444 = {
 			isa = PBXGroup;
 			children = (
+				7F93A0881D8FB1B5006B2A97 /* CoreLocation.framework */,
 				7F51A6AF1D8E6ED100A22444 /* swiftLocationTracking */,
 				7F51A6AE1D8E6ED100A22444 /* Products */,
 			);
@@ -54,12 +90,15 @@
 		7F51A6AF1D8E6ED100A22444 /* swiftLocationTracking */ = {
 			isa = PBXGroup;
 			children = (
+				7F15F5A31D8FFBDF00F3F723 /* realmDatabase */,
 				7F51A6B01D8E6ED100A22444 /* AppDelegate.swift */,
 				7F51A6B21D8E6ED100A22444 /* ViewController.swift */,
 				7F51A6B41D8E6ED100A22444 /* Main.storyboard */,
 				7F51A6B71D8E6ED100A22444 /* Assets.xcassets */,
 				7F51A6B91D8E6ED100A22444 /* LaunchScreen.storyboard */,
 				7F51A6BC1D8E6ED100A22444 /* Info.plist */,
+				7F93A0861D8FB18D006B2A97 /* LocationService.swift */,
+				7F15F5AD1D8FFC7300F3F723 /* pingData.swift */,
 			);
 			path = swiftLocationTracking;
 			sourceTree = "<group>";
@@ -74,6 +113,7 @@
 				7F51A6A91D8E6ED100A22444 /* Sources */,
 				7F51A6AA1D8E6ED100A22444 /* Frameworks */,
 				7F51A6AB1D8E6ED100A22444 /* Resources */,
+				7F15F5B71D8FFD6800F3F723 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +136,11 @@
 				TargetAttributes = {
 					7F51A6AC1D8E6ED100A22444 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F51A6B31D8E6ED100A22444 /* ViewController.swift in Sources */,
+				7F15F5AE1D8FFC7300F3F723 /* pingData.swift in Sources */,
+				7F93A0871D8FB18D006B2A97 /* LocationService.swift in Sources */,
 				7F51A6B11D8E6ED100A22444 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +227,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -226,6 +274,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -251,7 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swiftLocationTracking/realmDatabase",
+				);
 				INFOPLIST_FILE = swiftLocationTracking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftLocationTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -262,7 +317,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swiftLocationTracking/realmDatabase",
+				);
 				INFOPLIST_FILE = swiftLocationTracking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftLocationTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +349,7 @@
 				7F51A6C11D8E6ED100A22444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

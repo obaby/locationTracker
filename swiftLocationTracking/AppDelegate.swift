@@ -13,9 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var locationManager = LocationService()
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
         // Override point for customization after application launch.
+        
+        application.registerUserNotificationSettings(
+            UIUserNotificationSettings(
+                forTypes:[.Alert, .Sound, .Badge],
+                categories: nil
+            ))
+        
+        locationManager.startLocationService()
+        
         return true
     }
 
